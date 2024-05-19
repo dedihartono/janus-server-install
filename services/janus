@@ -1,0 +1,19 @@
+#copy config to default
+location /janus {
+    proxy_pass http://127.0.0.1:8088/janus;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade \$http_upgrade;
+    proxy_set_header Connection 'upgrade';
+}
+
+location /websocket {
+    proxy_pass http://127.0.0.1:8188;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade \$http_upgrade;
+    proxy_set_header Connection 'upgrade';
+}
+
+location /docs {
+    alias /opt/janus/share/janus/html;
+    index index.html;
+}

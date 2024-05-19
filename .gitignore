@@ -1,0 +1,9 @@
+janus-gateway
+libnice
+libsrtp-2.2.0
+v2.2.0.tar.gz
+libwebsockets
+paho.mqtt.c
+rabbitmq-c
+sofia-sip
+usrsctp
